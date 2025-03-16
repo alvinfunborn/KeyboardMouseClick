@@ -14,8 +14,10 @@ RCtrl:: {
         KeyWait "RCtrl", "L"       ; 等待右Ctrl 物理按键释放[2](@ref)
     } catch as e {
         Send "{Shift Up}"    ; 异常处理防止按键状态残留
+        Send "{F10 Up}"      ; 确保F10也被释放
     }
     Send "{Shift Up}"         ; 立即释放 Shift 键
+    Send "{F10 Up}"           ; 确保F10也被释放
 }
 
 RAlt:: {
